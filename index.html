@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-基础班总结" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/01/基础班总结/" class="article-date">
+  <time datetime="2018-11-01T11:28:28.938Z" itemprop="datePublished">2018-11-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="CSS-三大特性"><a href="#CSS-三大特性" class="headerlink" title="CSS 三大特性"></a>CSS 三大特性</h1><p>层叠 继承  优先级 是我们学习CSS 必须掌握的三个特性。</p>
+<p>color: rgba( )    opacity:0-1;</p>
+<p>文字颜色到了CSS3我们可以采取半透明的格式了语法格式如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">color</span>: <span class="selector-tag">rgba</span>(<span class="selector-tag">r</span>,<span class="selector-tag">g</span>,<span class="selector-tag">b</span>,<span class="selector-tag">a</span>)  <span class="selector-tag">a</span> 是<span class="selector-tag">alpha</span>  透明的意思  取值范围 0~1之间    <span class="selector-tag">color</span>: <span class="selector-tag">rgba</span>(0,0,0,0<span class="selector-class">.3</span>)     <span class="selector-tag">opacity</span> <span class="selector-pseudo">:0-1</span>;盒子中一切属性都透明显示,包括文字</span><br></pre></td></tr></table></figure>
+<h3 id="利用外边距实现盒子水平居中（掌握）"><a href="#利用外边距实现盒子水平居中（掌握）" class="headerlink" title="利用外边距实现盒子水平居中（掌握）"></a>利用外边距实现盒子水平居中（掌握）</h3><p>可以让一个盒子实现<strong>水平居中</strong>，需要满足一下两个条件：</p>
+<ol>
+<li><h4 id="必须是块级元素。"><a href="#必须是块级元素。" class="headerlink" title="必须是块级元素。"></a><code>必须是块级元素。</code></h4></li>
+<li><h4 id="盒子必须指定了宽度（width）"><a href="#盒子必须指定了宽度（width）" class="headerlink" title="盒子必须指定了宽度（width）"></a><strong><code>盒子必须指定了宽度（width）</code></strong></h4></li>
+</ol>
+<p>然后就给<strong>左右的外边距都设置为auto</strong>，就可使块级元素水平居中。</p>
+<h2 id="外边距合并（margin的BUG）"><a href="#外边距合并（margin的BUG）" class="headerlink" title="外边距合并（margin的BUG）"></a>外边距合并（margin的BUG）</h2><p>使用margin定义块元素的垂直外边距时，可能会出现外边距的合并。</p>
+<h3 id="相邻块元素垂直外边距的合并（垂直塌陷）"><a href="#相邻块元素垂直外边距的合并（垂直塌陷）" class="headerlink" title="相邻块元素垂直外边距的合并（垂直塌陷）"></a>相邻块元素垂直外边距的合并（垂直塌陷）</h3><p>当上下相邻的两个块元素相遇时，如果上面的元素有下外边距margin-bottom，下面的元素有上外边距margin-top，则他们之间的垂直间距不是margin-bottom与margin-top之和，而是两者中的较大者。这种现象被称为相邻块元素垂直外边距的合并（也称外边距塌陷）。</p>
+<h3 id="嵌套块元素垂直外边距的合并（包含塌陷）"><a href="#嵌套块元素垂直外边距的合并（包含塌陷）" class="headerlink" title="嵌套块元素垂直外边距的合并（包含塌陷）"></a>嵌套块元素垂直外边距的合并（包含塌陷）</h3><p>对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并，合并后的外边距为两者中的较大者，即使父元素的上外边距为0，也会发生合并。</p>
+<p>解决方案：</p>
+<ol>
+<li><code>可以为父元素定义1像素的上边框或上内边距。</code></li>
+<li><code>可以为父元素添加overflow:hidden。</code></li>
+</ol>
+<p>行内元素不能设置垂直方向的padding和margin,无效!</p>
+<p>宽度属性width和高度属性height仅适用于块级元素，对行内元素无效（ img 标签和 input除外）。</p>
+<p>按照 优先使用  宽度 （width）  其次 使用内边距（padding）    再次  外边距（margin）。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width &gt;  padding  &gt;   margin</span><br></pre></td></tr></table></figure>
+<p>原因：</p>
+<ol>
+<li><p>margin 会有外边距合并 还有 ie6下面margin 加倍的bug（讨厌）所以最后使用。</p>
+</li>
+<li><p>padding  会影响盒子大小， 需要进行加减计算（麻烦） 其次使用。</p>
+</li>
+<li><p>width   没有问题（嗨皮）我们经常使用宽度剩余法 高度剩余法来做。</p>
+<p>浮动的特点</p>
+</li>
+</ol>
+<p><img src="C:\Users\Administrator\Desktop\浮动特点.png" alt="浮动特点"></p>
+<p>定位的特点</p>
+<p><img src="C:\Users\Administrator\Desktop\相对定位 relative.png" alt="绝对定位absosute"></p>
+<p><img src="C:\Users\Administrator\Desktop\相对定位 relative.png" alt="相对定位 relative"></p>
+<p><img src="C:\Users\Administrator\Desktop\固定定位特点 fixed.png" alt="固定定位特点 fixed"></p>
+<h1 id="元素的显示与隐藏"><a href="#元素的显示与隐藏" class="headerlink" title="元素的显示与隐藏"></a>元素的显示与隐藏</h1><p>在CSS中有三个显示和隐藏的单词比较常见，我们要区分开，他们分别是 display          visibility 和 overflow。</p>
+<p>他们的主要目的是让一个元素在页面中消失，但是不在文档源码中删除。 最常见的是网站广告，当我们点击类似关闭不见了，但是我们重新刷新页面，它们又会出现和你玩躲猫猫！！</p>
+<h2 id="display-显示"><a href="#display-显示" class="headerlink" title="display 显示"></a>display 显示</h2><p>display 设置或检索对象是否及如何显示。</p>
+<p>display : none 隐藏对象 与它相反的是 display:block 除了转换为块级元素之外，同时还有显示元素的意思。</p>
+<p>特点： 隐藏之后，不再保留位置。</p>
+<h2 id="visibility-可见性"><a href="#visibility-可见性" class="headerlink" title="visibility 可见性"></a>visibility 可见性</h2><p>设置或检索是否显示对象。</p>
+<p>visible : 　对象可视</p>
+<p>hidden : 　对象隐藏</p>
+<p>特点： 隐藏之后，继续保留原有位置。（停职留薪）</p>
+<h2 id="overflow-溢出"><a href="#overflow-溢出" class="headerlink" title="overflow 溢出"></a>overflow 溢出</h2><p>检索或设置当对象的内容超过其指定高度及宽度时如何管理内容。</p>
+<p>visible : 　不剪切内容也不添加滚动条。</p>
+<p>auto : 　 超出自动显示滚动条，不超出不显示滚动条</p>
+<p>hidden : 　不显示超过对象尺寸的内容，超出的部分隐藏掉</p>
+<p>scroll : 　不管超出内容否，总是显示滚动条</p>
+<h1 id="HTML标签的嵌套规则"><a href="#HTML标签的嵌套规则" class="headerlink" title="HTML标签的嵌套规则"></a>HTML标签的嵌套规则</h1><p>1.块级元素可以嵌套行内元素以及某些块级元素</p>
+<p>2.行内元素可以嵌套行内元素,但是不能嵌套块级元素</p>
+<p>3.行内元素与行内元素并列,块级元素与块级元素并列</p>
+<p>4.特殊的元素,h系列标签与p标签不能包含块级元素</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/01/基础班总结/" data-id="cjnyjot020000ekxgzzcemc6e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/01/hello-world/" class="article-date">
+  <time datetime="2018-11-01T11:27:30.447Z" itemprop="datePublished">2018-11-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/01/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/01/hello-world/" data-id="cjnyjot0k0001ekxggrvvu7d6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/01/基础班总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/01/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
